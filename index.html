@@ -9,10 +9,15 @@
 
 	<body>
 		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-		<div id="main" style="width: 600px;height:400px;"></div>
+		<div>
+			<p>姓名：XXX</p>
+			<p>性别：X</p>
+			<p>年龄：XXX</p>
+		</div>
+		<div id="PersonalAbilityMap" style="width: 600px;height:400px;"></div>
 		<script type="text/javascript">
 			// 基于准备好的dom，初始化echarts实例
-			var myChart = echarts.init(document.getElementById('main'));
+			var myChart = echarts.init(document.getElementById('PersonalAbilityMap'));
 			// 指定图表的配置项和数据
 			var option = {
 				title: {
@@ -33,27 +38,27 @@
 						}
 					},
 					indicator: [{
-							name: '能力1',
+							name: '课程考勤',
 							max: 10
 						},
 						{
-							name: '能力2',
+							name: '创意',
 							max: 10
 						},
 						{
-							name: '能力3',
+							name: '逻辑思维',
 							max: 10
 						},
 						{
-							name: '能力4',
+							name: '编程语言',
 							max: 10
 						},
 						{
-							name: '能力5',
+							name: 'UI设计',
 							max: 10
 						},
 						{
-							name: '能力6',
+							name: '平时成绩',
 							max: 10
 						}
 					]
