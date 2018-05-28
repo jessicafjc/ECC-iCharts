@@ -1,9 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script type="text/javascript" src="js/echarts.js"></script>
 	</head>
+
 	<body>
+		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+		<div id="main" style="width: 600px;height:400px;"></div>
+		<script type="text/javascript">
+			// 基于准备好的dom，初始化echarts实例
+			var myChart = echarts.init(document.getElementById('main'));
+			// 指定图表的配置项和数据
+			var option = {
+				title: {
+					text: '个人能力图'
+				},
+				tooltip: {},
+//				legend: {
+//					data: ['预算分配（Allocated Budget）']
+//				},
+				radar: {
+					// shape: 'circle',
+					name: {
+						textStyle: {
+							color: '#fff',
+							backgroundColor: '#999',
+							borderRadius: 3,
+							padding: [3, 5]
+						}
+					},
+					indicator: [{
+							name: '能力1',
+							max: 10
+						},
+						{
+							name: '能力2',
+							max: 10
+						},
+						{
+							name: '能力3',
+							max: 10
+						},
+						{
+							name: '能力4',
+							max: 10
+						},
+						{
+							name: '能力5',
+							max: 10
+						},
+						{
+							name: '能力6',
+							max: 10
+						}
+					]
+				},
+				series: [{
+					name: '能力测试图',
+					type: 'radar',
+					areaStyle: {
+								normal: {
+									color: 'rgba(205, 105, 255, 0.5)'
+								}
+							},
+					data: [{
+							value: [7, 3, 6, 5, 5, 8],
+							name: '能力评估值',
+							
+						}
+					]
+				}]
+			};
+
+			// 使用刚指定的配置项和数据显示图表。
+			myChart.setOption(option);
+		</script>
 	</body>
+
 </html>
