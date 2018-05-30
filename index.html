@@ -1,87 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script type="text/javascript" src="js/echarts.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
 	</head>
+	<style>
+		.mui-content {
+			margin-top: 25%;
+		}
+		
+		body {
+			background-color: #ffffff00;
+		}
+		
+		.mui-table-view:after {
+			height: 0
+		}
+		
+		.mui-table-view:before {
+			height: 0
+		}
+		
+		
+	</style>
 
 	<body>
-		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 		<div>
-			<p>姓名：XXX</p>
-			<p>性别：X</p>
-			<p>年龄：XXX</p>
+			<span style="font-size: 24px;">ECC课程</span><span style="color: #ACACB4;">（108小时）</span>
 		</div>
-		<div id="PersonalAbilityMap" style="width: 600px;height:400px;"></div>
-		<script type="text/javascript">
-			// 基于准备好的dom，初始化echarts实例
-			var myChart = echarts.init(document.getElementById('PersonalAbilityMap'));
-			// 指定图表的配置项和数据
-			var option = {
-				title: {
-					text: '个人能力图'
-				},
-				tooltip: {},
-//				legend: {
-//					data: ['预算分配（Allocated Budget）']
-//				},
-				radar: {
-					// shape: 'circle',
-					name: {
-						textStyle: {
-							color: '#fff',
-							backgroundColor: '#999',
-							borderRadius: 3,
-							padding: [3, 5]
-						}
-					},
-					indicator: [{
-							name: '课程考勤',
-							max: 10
-						},
-						{
-							name: '创意',
-							max: 10
-						},
-						{
-							name: '逻辑思维',
-							max: 10
-						},
-						{
-							name: '编程语言',
-							max: 10
-						},
-						{
-							name: 'UI设计',
-							max: 10
-						},
-						{
-							name: '平时成绩',
-							max: 10
-						}
-					]
-				},
-				series: [{
-					name: '能力测试图',
-					type: 'radar',
-					areaStyle: {
-								normal: {
-									color: 'rgba(205, 105, 255, 0.5)'
-								}
-							},
-					data: [{
-							value: [7, 3, 6, 5, 5, 8],
-							name: '能力评估值',
-							
-						}
-					]
-				}]
-			};
+		<div class="mui-content" style="background-color:#fff;text-align: center;">
+			<ul class="mui-table-view mui-grid-view">
+				<li class="mui-table-view-cell mui-media mui-col-xs-6">
+					<a href="www/phaseInformation.html">
+						<img class="mui-media-object" src="img/test.png">
+						<!--<div class="mui-media-body">成都</div>-->
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6">
+					<a href="www/phaseInformation.html">
+						<img class="mui-media-object" src="img/test.png">
+						<!--<div class="mui-media-body">郑州</div>-->
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6">
+					<a href="www/phaseInformation.html">
+						<img class="mui-media-object" src="img/test.png">
+						<!--<div class="mui-media-body">无锡</div>-->
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-6">
+					<a href="www/phaseInformation.html">
+						<img class="mui-media-object" src="img/test.png">
+						<!--<div class="mui-media-body">成都</div>-->
+					</a>
+				</li>
+			</ul>
+			<button type="button" class="mui-btn mui-btn-outlined" style="width: 50px;height: 50px;background-size: 100% auto; background-image:url(img/test.png) ;">
+				</button>
+		</div>
 
-			// 使用刚指定的配置项和数据显示图表。
-			myChart.setOption(option);
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
 		</script>
 	</body>
 
